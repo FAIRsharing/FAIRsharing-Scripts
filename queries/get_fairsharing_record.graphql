@@ -1,0 +1,98 @@
+query {
+  fairsharingRecord(id: "__ID__") {
+    name
+    id
+    subjects {
+      id
+      label
+    }
+    registry
+    type
+    metadata
+    countries {
+      id
+      name
+    }
+    exhaustiveLicences
+    domains {
+      id
+      label
+    }
+    taxonomies {
+      id
+      label
+    }
+    userDefinedTags {
+      id
+      label
+    }
+    organisations {
+      id
+      name
+    }
+    organisationLinks {
+      id
+      relation
+      fairsharingRecord {
+        id
+      }
+      organisation {
+        id
+        name
+      }
+      grant {
+        id
+        name
+      }
+      isLead
+    }
+    grants {
+      id
+      name
+    }
+    publications {
+      id
+      title
+    }
+    licences {
+      id
+      name
+    }
+    licenceLinks {
+      relation
+      licence {
+        id
+        name
+      }
+    }
+    description
+    createdAt
+    updatedAt
+    recordAssociations {
+      recordAssocLabel
+      recordAssocLabelId
+      linkedRecord {
+        name
+        id
+        registry
+        type
+        metadata
+      }
+    }
+    reverseRecordAssociations {
+      recordAssocLabel
+      recordAssocLabelId
+      fairsharingRecord {
+        name
+        id
+        registry
+        type
+        metadata
+      }
+    }
+    objectTypes {
+      id
+    }
+    format
+  }
+}
