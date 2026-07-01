@@ -3,12 +3,12 @@ require 'json'
 require 'dotenv/load'
 require 'pathname'
 
-# Utility functions common to all FAIR tests.
+# Utility functions common to all scripts.
 module Utils
 
   # This will get a record from the FAIRsharing database via the API.
   # TODO: Currently the data are very extensive, but we may need only metadata and perhaps relations.
-  def query_fairsharing(id: nil, query:)
+  def query_fairsharing(id: nil, page: nil, query:)
     headers = {
       'Content-Type' => 'application/json' ,
       'Accept' => 'application/json',
@@ -34,13 +34,15 @@ module Utils
 
     query_string = query_path.read
     query_string = query_string.gsub('__ID__', JSON.generate(id.to_s)[1...-1]) unless id.nil?
+    query_string = query_string.gsub('__PAGE__', page.to_s) unless page.nil?
+
 
     response = HTTParty.post(ENV['FAIRSHARING_API_URL'],
                              body: { query: query_string }.to_json,
                              headers: headers
     )
 
-
+    #puts response
     if response.code == 200
       begin
         JSON.parse(response.body)['data']
