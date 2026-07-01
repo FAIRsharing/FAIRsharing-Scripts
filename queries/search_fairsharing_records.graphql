@@ -1,0 +1,25 @@
+query {
+  searchFairsharingRecords(page: __PAGE__, perPage: 100) {
+    currentPage
+    perPage
+    totalCount
+    totalPages
+    records{
+        id
+        type
+        name
+        abbreviation
+        doi
+        registry
+        description
+        createdAt
+        isHidden
+        isApproved
+        status
+        subjects {
+            label
+            id
+        }
+    }
+  }
+}
