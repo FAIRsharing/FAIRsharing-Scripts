@@ -20,11 +20,11 @@ module RecordsByDateCreated
     end
 
 
-    data = query_fairsharing(page: 1, query: 'search_fairsharing_records')
+    data = query_fairsharing(page: 1, subject: 'REMOVE', query: 'search_fairsharing_records')
     total_page = data['searchFairsharingRecords']['totalPages']
     oldest_date =  Date.new(2100, 1, 1)
     (1..total_page).each do |current_page|
-      data = query_fairsharing(page: current_page, query: 'search_fairsharing_records')
+      data = query_fairsharing(page: current_page, subject: 'REMOVE', query: 'search_fairsharing_records')
       data['searchFairsharingRecords']['records'].each do |rec|
         dat = rec['createdAt']
         year = dat.split('-')[0]
