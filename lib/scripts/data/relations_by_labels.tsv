@@ -1,0 +1,6 @@
+	RECORDS	TOTAL_RELATIONS	implements	accepts	outputs	related_to	shares_code_with	shares_data_with	profiles	extends	deprecates	collects	recommends	part_of	measures_principle	has_associated_metric
+standard	1974	6120	0	0	0	3152	0	0	606	2234	86	0	0	42	0	0
+database	3151	9591	4770	213	453	2897	157	910	0	85	106	0	0	0	0	0
+policy	432	3938	0	0	0	198	0	0	0	187	16	0	3537	0	0	0
+collection	124	5788	0	0	0	0	0	0	0	0	1	5787	0	0	0	0
+fairassist	167	514	0	0	0	189	0	0	0	0	30	0	0	0	142	153
