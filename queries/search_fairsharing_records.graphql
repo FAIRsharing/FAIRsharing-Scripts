@@ -1,5 +1,5 @@
 query {
-  searchFairsharingRecords(page: __PAGE__, perPage: 100) {
+  searchFairsharingRecords(page: __PAGE__, subjects: "__SUBJECT__", perPage: 100) {
     currentPage
     perPage
     totalCount

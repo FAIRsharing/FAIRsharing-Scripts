@@ -8,7 +8,7 @@ module Utils
 
   # This will get a record from the FAIRsharing database via the API.
   # TODO: Currently the data are very extensive, but we may need only metadata and perhaps relations.
-  def query_fairsharing(id: nil, page: nil, query:)
+  def query_fairsharing(id: nil, subject: nil, page: nil, query:)
     headers = {
       'Content-Type' => 'application/json' ,
       'Accept' => 'application/json',
@@ -35,7 +35,15 @@ module Utils
     query_string = query_path.read
     query_string = query_string.gsub('__ID__', JSON.generate(id.to_s)[1...-1]) unless id.nil?
     query_string = query_string.gsub('__PAGE__', page.to_s) unless page.nil?
+    unless subject.nil?
+      if subject == 'REMOVE'
+        query_string = query_string.gsub('subjects: "__SUBJECT__",', '')
+      else
+        query_string = query_string.gsub('__SUBJECT__', subject)
+      end
+    end
 
+    #puts query_string
 
     response = HTTParty.post(ENV['FAIRSHARING_API_URL'],
                              body: { query: query_string }.to_json,
