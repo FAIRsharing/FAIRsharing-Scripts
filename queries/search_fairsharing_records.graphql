@@ -20,6 +20,9 @@ query {
             label
             id
         }
+        recordAssociations{
+            recordAssocLabel
+        }
     }
   }
 }
