@@ -6,8 +6,8 @@ module RecordsByObjectType
   #To execute it:
   # 0. "bundle exec irb" in FAIRsharing-Scripts folder
   # 1. require_relative 'lib/scripts/records_by_object_type.rb'; include RecordsByObjectType
-  # 2. get_records_by_year_subject()
-  # Results are in file lib/scripts/data/ecords_by_object_types.tsv
+  # 2. get_records_by_object_type()
+  # Results are in file lib/scripts/data/records_by_object_types.tsv
 
   def get_records_by_object_type()
     file = File.open("lib/scripts/data/records_by_object_type.tsv", 'w')
