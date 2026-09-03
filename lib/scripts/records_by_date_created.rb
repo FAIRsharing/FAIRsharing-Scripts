@@ -60,6 +60,7 @@ module RecordsByDateCreated
           results[reg][dat_string] = 0 unless results[reg].key?(dat_string)
         }
       end
+    end
       %W[all standard database policy collection].each do |reg|
         sorted_hash =  results[reg].sort_by { |key| key }.to_h
         results[reg] = sorted_hash
@@ -70,10 +71,10 @@ module RecordsByDateCreated
         end
       end
       results['all'].each do |l|
+
         aux = "#{l[0]}|#{l[1]}|#{results['standard'][l[0]]}|#{results['database'][l[0]]}|#{results['policy'][l[0]]}|#{results['collection'][l[0]]}"
         file.write("#{aux}|#{results_added['all'][l[0]]}|#{results_added['standard'][l[0]]}|#{results_added['database'][l[0]]}|#{results_added['policy'][l[0]]}|#{results_added['collection'][l[0]]}\n")
       end
 
-    end
   end
 end
