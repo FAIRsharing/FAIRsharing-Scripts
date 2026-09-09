@@ -1,7 +1,7 @@
 # FAIRsharing-Scripts
 
 <!-- QUALITY_BADGE_START -->
-[![Software quality](https://img.shields.io/badge/FAIRness-22%25-red "score: 22% | passed: 9 | failed: 32 | errors: 1")](RSFC_REPORT.md)
+[![Software quality](https://img.shields.io/badge/FAIRness-24%25-red "score: 24% | passed: 10 | failed: 31 | errors: 1")](RSFC_REPORT.md)
 <!-- QUALITY_BADGE_END -->
 
 A variety of user scripts for getting statistics on FAIRsharing records, etc. etc.

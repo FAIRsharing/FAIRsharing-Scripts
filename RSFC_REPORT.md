@@ -6,13 +6,13 @@ An automated assessment of the FAIRsharing-Scripts tool based on the EVERSE soft
 
 - **Software:** FAIRsharing-Scripts
 - **Repository:** https://github.com/FAIRsharing/FAIRsharing-Scripts
-- **Assessment date:** 2026-09-09T11:20:28Z
+- **Assessment date:** 2026-09-09T11:24:07Z
 - **Total checks:** 42
 
 ## Summary
 
-- **Passed (`true`)**: 9
-- **Failed (`false`)**: 32
+- **Passed (`true`)**: 10
+- **Failed (`false`)**: 31
 - **Errors (`error`)**: 1
 
 ## Results Table
@@ -91,10 +91,10 @@ An automated assessment of the FAIRsharing-Scripts tool based on the EVERSE soft
       <td>Software has descriptive metadata</td>
       <td><a href="#descriptive_metadata-https--w3idorg-rsfc-test-rsfc-04-4">false</a></td>
     </tr>
-    <tr style="background-color: #f8d7da;">
+    <tr style="background-color: #d4edda;">
       <td>https://w3id.org/rsfc/test/RSFC-04-5</td>
       <td>There is a codemeta file</td>
-      <td><a href="#descriptive_metadata-https--w3idorg-rsfc-test-rsfc-04-5">false</a></td>
+      <td><a href="#descriptive_metadata-https--w3idorg-rsfc-test-rsfc-04-5">true</a></td>
     </tr>
     <tr style="background-color: #f8d7da;">
       <td>https://w3id.org/rsfc/test/RSFC-05-1</td>
@@ -269,7 +269,7 @@ An automated assessment of the FAIRsharing-Scripts tool based on the EVERSE soft
 - **Test ID:** https://w3id.org/rsfc/test/RSFC-04-1
 - **Result:** false
 - **Process:** Searches for codemeta, citation and package files in the repository
-- **Evidence:** Could not find any of the following metadata files: cff, codemeta, package_file
+- **Evidence:** Could not find any of the following metadata files: cff, package_file
 - **Suggestions:** You should describe your software in metadata files. More information at https://everse.software/RSQKit/software_metadata
 
 <a id="descriptive_metadata-https--w3idorg-rsfc-test-rsfc-04-3"></a>
@@ -294,10 +294,10 @@ An automated assessment of the FAIRsharing-Scripts tool based on the EVERSE soft
 #### There is a codemeta file
 
 - **Test ID:** https://w3id.org/rsfc/test/RSFC-04-5
-- **Result:** false
+- **Result:** true
 - **Process:** Searches for a codemeta.json file in the repository
-- **Evidence:** Could not find a codemeta.json file in the repository
-- **Suggestions:** You should create a codemeta file to describe your software. More information at https://everse.software/RSQKit/software_metadata
+- **Evidence:** A codemeta.json file was found in the root of the repository
+- **Suggestions:** No suggestions
 
 <a id="descriptive_metadata-https--w3idorg-rsfc-test-rsfc-06-1"></a>
 #### Authors are declared
@@ -332,8 +332,8 @@ An automated assessment of the FAIRsharing-Scripts tool based on the EVERSE soft
 - **Test ID:** https://w3id.org/rsfc/test/RSFC-06-4
 - **Result:** false
 - **Process:** Checks if all authors stated in a codemeta.json file have a role assigned 
-- **Evidence:** Could not find codemeta file
-- **Suggestions:** You should create a codemeta file to describe your software. More information at https://everse.software/RSQKit/software_metadata
+- **Evidence:** There are no authors defined in the codemeta file
+- **Suggestions:** You should include your software's authors metadata in the codemeta.json file. More information at https://everse.software/RSQKit/software_metadata
 
 ### has_contribution_guidelines
 
@@ -568,7 +568,7 @@ An automated assessment of the FAIRsharing-Scripts tool based on the EVERSE soft
 - **Test ID:** https://w3id.org/rsfc/test/RSFC-16-1
 - **Result:** false
 - **Process:** Searches for licensing information in the codemeta, citation and package files if they exist
-- **Evidence:** Could not find any licensing information in the following metadata files: codemeta, citation, package
+- **Evidence:** Could not find any licensing information in the following metadata files: citation, package
 - **Suggestions:** Information about your license should be present in other metadata files like codemeta.json, package files or CITATION. More information on https://everse.software/RSQKit/software_metadata
 
 ### software_has_tests
